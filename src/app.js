@@ -1,6 +1,6 @@
 import getTimeFrame from './utility/GetTimeFrame'
 import setStylesheet from './app/SetStylesheet'
-import { setWelcomingPhrase } from './components/PageTitle'
+import { setWelcomingPhrase, setTasksLeft } from './components/PageTitle'
 
 // GET USER'S TIMEFRAME
 // SET STYLESHEET
@@ -15,4 +15,7 @@ import { setWelcomingPhrase } from './components/PageTitle'
 
 const timeframe = getTimeFrame(new Date().getHours())
 setStylesheet(timeframe)
+
+
 setWelcomingPhrase(document.querySelector('#welcoming-phrase'), timeframe)
+setTasksLeft(document.querySelector('#tasks-left'))

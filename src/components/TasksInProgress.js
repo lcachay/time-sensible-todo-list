@@ -1,0 +1,1 @@
+export const taskList = document.querySelector('.in-progress-list')
