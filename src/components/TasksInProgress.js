@@ -10,7 +10,7 @@ export const newTaskHandler = (buttonElement) => {
 
    textInputElement.value = ''
 
-   updateNewTaskProgress(taskList.children.length, 'left')
+   updateNewTaskProgress(taskList.children.length)
 }
 
 const createNewTaskElement = (text) => {
