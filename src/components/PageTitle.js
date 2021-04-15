@@ -1,14 +1,10 @@
-import GetTasksLeft from '../utility/GetTasksLeft'
-
 export const setWelcomingPhrase = (element, timeframe) => {
    element.textContent = `Good ${timeframe}`
 }
 
-export const setTasksLeft = (element) => {
-   const tasksLeft = GetTasksLeft()
+export const setTasksLeft = (element, tasksInProgress) => {
+   if (tasksInProgress == 1)
+      return element.textContent = `${tasksInProgress} task`
 
-   if (tasksLeft == 1)
-      return element.textContent = `${tasksLeft} task`
-
-   element.textContent = `${tasksLeft} tasks`
+   element.textContent = `${tasksInProgress} tasks`
 }

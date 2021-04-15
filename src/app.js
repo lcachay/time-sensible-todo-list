@@ -14,8 +14,19 @@ import { setWelcomingPhrase, setTasksLeft } from './components/PageTitle'
 // EVENT LISTENER TASK ELEMENT: REMOVE IT FROM THE LIST OF "IN PROGRESS", REMOVE TASK IN PROGRESS ELEMENT, ADD IT TO THE "FINISHED" TASK LIST, ADD A TASK FINISHED Element, UPDATE TASKS LEFT, AND TASKS FINISHED
 
 const timeframe = getTimeFrame(new Date().getHours())
+const tasksInProgress = []
+const tasksFinished = []
+
 setStylesheet(timeframe)
 
-
 setWelcomingPhrase(document.querySelector('#welcoming-phrase'), timeframe)
-setTasksLeft(document.querySelector('#tasks-left'))
+
+Array.from( document.querySelector('.in-progress-list').children )
+   .forEach( task => tasksInProgress.push( task.textContent.trim() ) )
+
+Array.from( document.querySelector('#log-list').children )
+   .forEach( task => tasksFinished.push( task.textContent.trim() ) )
+
+console.log(tasksFinished);
+
+setTasksLeft(document.querySelector('#tasks-left'), tasksInProgress.length)
