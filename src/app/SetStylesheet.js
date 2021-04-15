@@ -1,4 +1,3 @@
-
 export default timeframe => {
    const link = document.createElement('link');
    link.rel = 'stylesheet';
