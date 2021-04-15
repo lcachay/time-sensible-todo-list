@@ -6,8 +6,7 @@ import { tasksInProgress, tasksCreated, tasksLeftElement } from '../app/Globals'
 
 export const taskList = document.querySelector('.in-progress-list')
 
-export const newTaskHandler = (buttonElement) => {
-   const textInputElement = buttonElement.previousElementSibling
+export const newTaskHandler = (textInputElement) => {
    
    updateNewTaskProgress(taskList.children.length)
 

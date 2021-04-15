@@ -8,12 +8,12 @@ body{
    color: #fff;
 }
 
+header{
+   padding-top: 4em;
+}
 .container {
    width: 80%;
    max-width: 100em;
    margin: 0 auto;
 
-}
-
-.page-title{
 }
