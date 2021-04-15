@@ -1,7 +1,7 @@
 export default timeframe => {
-   const link = document.createElement('link');
-   link.rel = 'stylesheet';
+   const link = document.createElement('link')
+   link.rel = 'stylesheet'
    link.href = `assets/styles/${timeframe}-style.css`
-   document.head.appendChild(link);
+   document.head.appendChild(link)
 
 }
