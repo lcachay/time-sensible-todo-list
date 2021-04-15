@@ -6,7 +6,12 @@ import { tasksInProgress, tasksCreated, tasksLeftElement } from '../app/Globals'
 
 export const taskList = document.querySelector('.in-progress-list')
 
-export const newTaskHandler = (textInputElement) => {
+export const newTaskHandler = (event, textInputElement) => {
+   
+   if(event.code && event.code !== 'Enter')
+      return
+
+   console.log(event.code)
    if(!textInputElement.value.trim())
       return
    
@@ -32,6 +37,6 @@ const createNewTaskElement = (text) => {
 }
 
 taskList.addEventListener('click', event => {
-   finishTaskHandler(event.target.textContent.trim())
-   event.target.remove()
+   finishTaskHandler(event.target.closest('li').textContent.trim())
+   event.target.closest('li').remove()
 })
