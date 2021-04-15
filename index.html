@@ -6,9 +6,57 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="assets/styles/style.css">
    <script src="assets/scripts/app.js"></script>
-   <title>Document</title>
+   <title>Todo</title>
 </head>
 <body>
-   <h1>Index</h1>
+   <header class="header container">
+      <h1 class="page-title">Welcoming phrase <span id="username"></span></h1>
+      <input type="text" name="username" id="username-input" >
+      <h1 class="page-title">,</h1>
+      <h1 class="page-title">you have <span id="tasks-left"></span> tasks left</h1>
+   </header>
+   <main class="main container">
+      <section class="section-container">
+         <div class="new-task-container">
+            <input type="text" name="new-task" id="new-task-input" placeholder="Add a new task">
+            <button>+</button>
+         </div>
+         <ul class="in-progress-list">
+            <li class="in-progress-item">
+               Task one
+            </li>
+         </ul>
+      </section>
+      <section class="section-container">
+         <div class="progress-container">
+            <h2 class="section-title">Progress made today</h2>
+            <div class="task-breakdown">
+               <div class="tasks-created">
+                  <div class="progress-num">0</div>
+                  <div class="progress-description">tasks created</div>
+               </div>
+               <div class="tasks-finished">
+                  <div class="progress-num">0</div>
+                  <div class="progress-description">tasks finished</div>
+               </div>
+               <div class="tasks-left">
+                  <div class="progress-num">0</div>
+                  <div class="progress-description">tasks left</div>
+               </div>
+            </div>
+         </div>
+         <div class="finished-tasks-container">
+            <h2 class="section-title">Finished task log</h2>
+            <div class="log-container">
+               <div class="finished-item">
+                  Task two
+               </div>
+               <div class="finished-item">
+                  Task three
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
 </body>
 </html>
