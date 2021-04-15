@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+body{
+   box-sizing: border-box;
+   margin: 0;
+   font-family: 'Lato', sans-serif;
+   background: linear-gradient(-45deg, #1E3C72 0%,  #2A5298 100%) fixed;
+   color: #fff;
+}
+
+.container {
+   width: 80%;
+   max-width: 100em;
+   margin: 0 auto;
+
+}
+
+.page-title{
+}

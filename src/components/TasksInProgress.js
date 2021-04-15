@@ -1,6 +1,7 @@
 import { updateNewTaskProgress } from './Progress'
 import { finishTaskHandler } from './TasksFinished'
-import { tasksInProgress, tasksCreated } from '../app/Globals'
+import { setTasksLeft } from './PageTitle'
+import { tasksInProgress, tasksCreated, tasksLeftElement } from '../app/Globals'
 
 
 export const taskList = document.querySelector('.in-progress-list')
@@ -18,6 +19,7 @@ export const newTaskHandler = (buttonElement) => {
 
    textInputElement.value = ''
 
+   setTasksLeft(tasksLeftElement, tasksInProgress.length)
 }
 
 const createNewTaskElement = (text) => {

@@ -3,7 +3,7 @@ import setStylesheet from './app/SetStylesheet'
 import { addButton } from './components/AddButton'
 import { setTasksProgress } from './components/Progress'
 import { setWelcomingPhrase, setTasksLeft } from './components/PageTitle'
-import { tasksInProgress, tasksFinished, tasksCreated } from './app/Globals'
+import { tasksInProgress, tasksFinished, tasksCreated, tasksLeftElement } from './app/Globals'
 
 // GET USER'S TIMEFRAME
 // SET STYLESHEET
@@ -35,7 +35,7 @@ Array.from( document.querySelector('#log-list').children )
       tasksCreated.push( task.textContent.trim() )
    } )
 
-setTasksLeft(document.querySelector('#tasks-left'), tasksInProgress.length)
+setTasksLeft(tasksLeftElement, tasksInProgress.length)
 
 setTasksProgress(tasksCreated.length, 'created')
 setTasksProgress(tasksFinished.length, 'finished')
