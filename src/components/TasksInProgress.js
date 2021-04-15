@@ -1,4 +1,5 @@
 import { updateNewTaskProgress } from './Progress'
+import { finishTaskHandler } from './TasksFinished'
 
 
 export const taskList = document.querySelector('.in-progress-list')
@@ -6,11 +7,13 @@ export const taskList = document.querySelector('.in-progress-list')
 export const newTaskHandler = (buttonElement) => {
    const textInputElement = buttonElement.previousElementSibling
    
+   updateNewTaskProgress(taskList.children.length)
+
+   
    createNewTaskElement(textInputElement.value)
 
    textInputElement.value = ''
 
-   updateNewTaskProgress(taskList.children.length)
 }
 
 const createNewTaskElement = (text) => {
@@ -18,5 +21,10 @@ const createNewTaskElement = (text) => {
    newTaskElement.classList = 'in-progress-item'
    newTaskElement.textContent = text
 
-   document.querySelector('.in-progress-list').append(newTaskElement)
+   taskList.append(newTaskElement)
 }
+
+taskList.addEventListener('click', event => {
+   finishTaskHandler(event.target.textContent.trim())
+   event.target.remove()
+})
