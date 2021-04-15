@@ -3,6 +3,7 @@ import setStylesheet from './app/SetStylesheet'
 import { addButton } from './components/AddButton'
 import { setTasksProgress } from './components/Progress'
 import { setWelcomingPhrase, setTasksLeft } from './components/PageTitle'
+import { tasksInProgress, tasksFinished, tasksCreated } from './app/Globals'
 
 // GET USER'S TIMEFRAME
 // SET STYLESHEET
@@ -17,25 +18,26 @@ import { setWelcomingPhrase, setTasksLeft } from './components/PageTitle'
 
 const inProgressListElement = document.querySelector('.in-progress-list')
 const timeframe = getTimeFrame(new Date().getHours())
-const tasksInProgress = []
-const tasksFinished = []
-let tasksTotal
 
 setStylesheet(timeframe)
 
 setWelcomingPhrase(document.querySelector('#welcoming-phrase'), timeframe)
 
 Array.from( inProgressListElement.children )
-   .forEach( task => tasksInProgress.push( task.textContent.trim() ) )
+   .forEach( task => {
+      tasksInProgress.push( task.textContent.trim() );
+      tasksCreated.push(task.textContent.trim() )
+   } )
 
 Array.from( document.querySelector('#log-list').children )
-   .forEach( task => tasksFinished.push( task.textContent.trim() ) )
-
-tasksTotal = tasksInProgress.length + tasksFinished.length
+   .forEach( task => {
+      tasksFinished.push( task.textContent.trim() )
+      tasksCreated.push( task.textContent.trim() )
+   } )
 
 setTasksLeft(document.querySelector('#tasks-left'), tasksInProgress.length)
 
-setTasksProgress(tasksTotal, 'created')
+setTasksProgress(tasksCreated.length, 'created')
 setTasksProgress(tasksFinished.length, 'finished')
 setTasksProgress(tasksInProgress.length, 'left')
 

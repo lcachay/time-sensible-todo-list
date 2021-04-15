@@ -1,5 +1,6 @@
 import { updateNewTaskProgress } from './Progress'
 import { finishTaskHandler } from './TasksFinished'
+import { tasksInProgress, tasksCreated } from '../app/Globals'
 
 
 export const taskList = document.querySelector('.in-progress-list')
@@ -9,10 +10,14 @@ export const newTaskHandler = (buttonElement) => {
    
    updateNewTaskProgress(taskList.children.length)
 
+
+   createNewTaskElement(textInputElement.value.trim())
    
-   createNewTaskElement(textInputElement.value)
+   tasksInProgress.push(textInputElement.value.trim())
+   tasksCreated.push(textInputElement.value.trim())
 
    textInputElement.value = ''
+
 
 }
 
