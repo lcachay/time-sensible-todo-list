@@ -1,10 +1,16 @@
-const { Module } = require('webpack');
+// const { Module } = require('webpack');
 const path = require('path');
 
-Module.exports = {
+module.exports = {
+   mode: 'development',
    entry: './src/app.js',
    output: {
       filename: 'app.js',
-      path: path.resolve(__dirname, 'assets', 'scripts')
+      path: path.resolve(__dirname, 'assets', 'scripts'),
+      publicPath: 'assets/scripts/'
+   },
+   devtool: 'eval-cheap-module-source-map',
+   devServer: {
+      writeToDisk: true
    }
 };
