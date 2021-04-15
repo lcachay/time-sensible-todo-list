@@ -184,3 +184,16 @@ main{
 .progress-num{
    font-size: 4.5rem;
 }
+
+.log-container{
+   display: flex;
+   gap: 1em;
+   flex-wrap: wrap;
+}
+
+.finished-item{
+   padding: .5em 1em;
+   background-color: #1A3460;
+   border-radius: .5rem;
+   font-size: 1.5rem;
+}
