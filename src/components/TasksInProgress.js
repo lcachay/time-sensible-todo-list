@@ -18,7 +18,6 @@ export const newTaskHandler = (buttonElement) => {
 
    textInputElement.value = ''
 
-
 }
 
 const createNewTaskElement = (text) => {
