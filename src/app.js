@@ -1,6 +1,7 @@
 import getTimeFrame from './utility/GetTimeFrame'
 import setStylesheet from './app/SetStylesheet'
 import { addButton } from './components/AddButton'
+import { addInput } from './components/AddInput'
 import { setTasksProgress } from './components/Progress'
 import { setWelcomingPhrase, setTasksLeft } from './components/PageTitle'
 import { tasksInProgress, tasksFinished, tasksCreated, tasksLeftElement } from './app/Globals'
@@ -43,4 +44,4 @@ setTasksProgress(tasksInProgress.length, 'left')
 
 
 addButton()
-
+addInput()

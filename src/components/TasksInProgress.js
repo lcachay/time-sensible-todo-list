@@ -7,6 +7,8 @@ import { tasksInProgress, tasksCreated, tasksLeftElement } from '../app/Globals'
 export const taskList = document.querySelector('.in-progress-list')
 
 export const newTaskHandler = (textInputElement) => {
+   if(!textInputElement.value.trim())
+      return
    
    updateNewTaskProgress(taskList.children.length)
 

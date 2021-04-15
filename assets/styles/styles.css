@@ -9,11 +9,178 @@ body{
 }
 
 header{
-   padding-top: 4em;
+   padding-top: 6.25em;
+   padding-bottom: 12em;
 }
 .container {
    width: 80%;
    max-width: 100em;
    margin: 0 auto;
 
+}
+
+.page-title{
+   font-size: 3rem;
+   margin: 0;
+   line-height: 1.5;
+   font-weight: 900;
+}
+
+#username-input{
+   background: none;
+   border: none;
+   border-bottom: 2px solid white;
+   font-size: inherit;
+   font-weight: inherit;
+   color: white;
+   margin: 0 1rem;
+   width: 10ch;
+   transition: background-color 150ms ease-out;
+}
+
+input:focus, 
+button:focus{
+   outline: none;
+}
+
+#username-input:focus{
+   background-color: rgba(0, 0, 0, 0.24);
+}
+
+
+main{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 3em;
+}
+
+
+.in-progress.section-container{
+   flex-basis: 50%;
+   flex-shrink: 0;
+   flex-grow: 1;
+}
+
+.finished.section-container{
+   min-width: 25em;
+   flex-basis: 40%;
+   flex-shrink: 1;
+   flex-grow: 1;
+}
+
+
+.new-task-container{
+   background-color: #1A3460;
+   border-radius: 1rem;
+   border: 2px solid #5783D1;
+   display: flex;
+   justify-content: space-between;
+}
+
+#new-task-input{
+   background: none;
+   border: none;
+   font-size: 1.125rem;
+   padding: 1em 2em;
+   flex-basis: 100%;
+   color: white;
+}
+
+#new-task-input::placeholder{
+   color: #A7BEE7
+}
+
+
+.textfield-btn{
+   background: none;
+   color: #5783D1;
+   border: none;
+   font-size: 1.5rem;
+   padding: 0 1em;
+   font-weight: 700;
+}
+
+.textfield-btn:focus{
+   color: #A7BEE7;
+}
+
+.in-progress-list{
+   list-style: none;
+   font-size: 1.5rem;
+   line-height: 3;
+   margin-top: 3em;
+   cursor: default;
+}
+
+.in-progress-item{
+   position: relative;
+}
+
+.in-progress-item::before{
+   content: '';
+   position: absolute;
+   left: -2rem;
+   top: 0;
+   height: 2px;
+   width: 1rem;
+   background-color: white;
+}
+
+
+.in-progress-item:before, 
+.in-progress-item:after {
+   content: '';
+   position: absolute;
+   height: 1rem;
+   width: 3px;
+   background-color: white;
+   left: -1.75rem;
+   transition: 50ms ease-in-out;
+ }
+ .in-progress-item::before {
+   transform: rotate(-55deg);
+   top: 1.5rem;
+ }
+ .in-progress-item::after {
+   transform: rotate(55deg);
+   bottom: 1.5rem;
+ }
+
+
+.in-progress-item:hover::before{
+   top: 2.5rem;
+   height: .5rem;
+   left: -2.25rem;
+}
+
+
+.in-progress-item:hover::after{
+   transform: rotate(50deg);
+}
+
+
+.progress-container{
+   background-color: #1A3460;
+   padding: 1.5em 2em 3.25em  2em ;
+   border-radius: 1rem;
+   margin-bottom: 4.5em;
+}
+
+.task-breakdown{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   justify-content: space-between;
+   text-align: center;
+}
+
+.section-title{
+   margin: 0;
+   margin-bottom: 1.75em;
+   text-transform: uppercase;
+   font-size: 1.125rem;
+   font-weight: 700;
+}
+
+.progress-num{
+   font-size: 4.5rem;
 }
