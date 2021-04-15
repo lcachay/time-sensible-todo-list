@@ -1,6 +1,6 @@
 import getTimeFrame from './utility/GetTimeFrame'
 import setStylesheet from './app/SetStylesheet'
-import setWelcomingPhrase from './app/SetWelcomingPhrase'
+import { setWelcomingPhrase } from './components/PageTitle'
 
 // GET USER'S TIMEFRAME
 // SET STYLESHEET
