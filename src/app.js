@@ -15,9 +15,7 @@ import { setWelcomingPhrase, setTasksLeft } from './components/PageTitle'
 // EVENT LISTENER ADD BUTTON: GET TEXT FROM INPUT FIELD AND ADD IT TO THE LIST OF "IN PROGRESS" TASKS, UPDATE NUMBER OF TASKS, ADD A TASK IN PROGRESS ELEMENT, UPDATE TASKS LEFT AND TASKS CREATED
 // EVENT LISTENER TASK ELEMENT: REMOVE IT FROM THE LIST OF "IN PROGRESS", REMOVE TASK IN PROGRESS ELEMENT, ADD IT TO THE "FINISHED" TASK LIST, ADD A TASK FINISHED Element, UPDATE TASKS LEFT, AND TASKS FINISHED
 
-const tasksCreatedElement = document.querySelector('.tasks-created')
-const tasksFinishedElement = document.querySelector('.tasks-finished')
-const tasksLeftElement = document.querySelector('.tasks-left')
+
 const timeframe = getTimeFrame(new Date().getHours())
 const tasksInProgress = []
 const tasksFinished = []
@@ -37,9 +35,9 @@ tasksTotal = tasksInProgress.length + tasksFinished.length
 
 setTasksLeft(document.querySelector('#tasks-left'), tasksInProgress.length)
 
-setTasksProgress(tasksCreatedElement, tasksTotal, 'created')
-setTasksProgress(tasksFinishedElement, tasksFinished.length, 'finished')
-setTasksProgress(tasksLeftElement, tasksInProgress.length, 'left')
+setTasksProgress(tasksTotal, 'created')
+setTasksProgress(tasksFinished.length, 'finished')
+setTasksProgress(tasksInProgress.length, 'left')
 
 
 addButton()
