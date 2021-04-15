@@ -1,5 +1,6 @@
 import getTimeFrame from './utility/GetTimeFrame'
 import setStylesheet from './app/SetStylesheet'
+import setWelcomingPhrase from './app/SetWelcomingPhrase'
 
 // GET USER'S TIMEFRAME
 // SET STYLESHEET
@@ -14,3 +15,4 @@ import setStylesheet from './app/SetStylesheet'
 
 const timeframe = getTimeFrame(new Date().getHours())
 setStylesheet(timeframe)
+setWelcomingPhrase(document.querySelector('#welcoming-phrase'), timeframe)
