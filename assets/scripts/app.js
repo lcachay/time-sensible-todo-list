@@ -359,9 +359,32 @@ webpackContext.id = "./node_modules/webpack/hot sync ^\\.\\/log$";
 /*!********************!*\
   !*** ./src/app.js ***!
   \********************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("// GET USER'S TIMEFRAME\r\n// SET STYLESHEET\r\n// SET WELCOMING PHRASE\r\n// GET USER'S NAME\r\n// SAVE USER'S NAME IN BROWSER STORAGE\r\n// IF THERE IS A NAME IN STORAGE SHOW IT\r\n// GET NUMBER OF TASKS IN \"IN PROGRESS\" TASK SECTION AND SHOW THEM\r\n// TOGGLE TASK OR TASKS ACCORDING TO NUMBER\r\n// EVENT LISTENER ADD BUTTON: GET TEXT FROM INPUT FIELD AND ADD IT TO THE LIST OF \"IN PROGRESS\" TASKS, UPDATE NUMBER OF TASKS, ADD A TASK IN PROGRESS ELEMENT, UPDATE TASKS LEFT AND TASKS CREATED\r\n// EVENT LISTENER TASK ELEMENT: REMOVE IT FROM THE LIST OF \"IN PROGRESS\", REMOVE TASK IN PROGRESS ELEMENT, ADD IT TO THE \"FINISHED\" TASK LIST, ADD A TASK FINISHED Element, UPDATE TASKS LEFT, AND TASKS FINISHED\r\n\r\nconst time = new Date().getHours();\r\nconsole.log(time);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvYXBwLmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vdGltZS1zZW5zaWJsZS10b2RvLWxpc3QvLi9zcmMvYXBwLmpzPzExMTIiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gR0VUIFVTRVInUyBUSU1FRlJBTUVcclxuLy8gU0VUIFNUWUxFU0hFRVRcclxuLy8gU0VUIFdFTENPTUlORyBQSFJBU0VcclxuLy8gR0VUIFVTRVInUyBOQU1FXHJcbi8vIFNBVkUgVVNFUidTIE5BTUUgSU4gQlJPV1NFUiBTVE9SQUdFXHJcbi8vIElGIFRIRVJFIElTIEEgTkFNRSBJTiBTVE9SQUdFIFNIT1cgSVRcclxuLy8gR0VUIE5VTUJFUiBPRiBUQVNLUyBJTiBcIklOIFBST0dSRVNTXCIgVEFTSyBTRUNUSU9OIEFORCBTSE9XIFRIRU1cclxuLy8gVE9HR0xFIFRBU0sgT1IgVEFTS1MgQUNDT1JESU5HIFRPIE5VTUJFUlxyXG4vLyBFVkVOVCBMSVNURU5FUiBBREQgQlVUVE9OOiBHRVQgVEVYVCBGUk9NIElOUFVUIEZJRUxEIEFORCBBREQgSVQgVE8gVEhFIExJU1QgT0YgXCJJTiBQUk9HUkVTU1wiIFRBU0tTLCBVUERBVEUgTlVNQkVSIE9GIFRBU0tTLCBBREQgQSBUQVNLIElOIFBST0dSRVNTIEVMRU1FTlQsIFVQREFURSBUQVNLUyBMRUZUIEFORCBUQVNLUyBDUkVBVEVEXHJcbi8vIEVWRU5UIExJU1RFTkVSIFRBU0sgRUxFTUVOVDogUkVNT1ZFIElUIEZST00gVEhFIExJU1QgT0YgXCJJTiBQUk9HUkVTU1wiLCBSRU1PVkUgVEFTSyBJTiBQUk9HUkVTUyBFTEVNRU5ULCBBREQgSVQgVE8gVEhFIFwiRklOSVNIRURcIiBUQVNLIExJU1QsIEFERCBBIFRBU0sgRklOSVNIRUQgRWxlbWVudCwgVVBEQVRFIFRBU0tTIExFRlQsIEFORCBUQVNLUyBGSU5JU0hFRFxyXG5cclxuY29uc3QgdGltZSA9IG5ldyBEYXRlKCkuZ2V0SG91cnMoKTtcclxuY29uc29sZS5sb2codGltZSk7Il0sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/app.js\n");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utility_GetTimeFrame__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utility/GetTimeFrame */ \"./src/utility/GetTimeFrame.js\");\n/* harmony import */ var _utility_AddStylesheet__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utility/AddStylesheet */ \"./src/utility/AddStylesheet.js\");\n\r\n\r\n\r\n// GET USER'S TIMEFRAME\r\n// SET STYLESHEET\r\n// SET WELCOMING PHRASE\r\n// GET USER'S NAME\r\n// SAVE USER'S NAME IN BROWSER STORAGE\r\n// IF THERE IS A NAME IN STORAGE SHOW IT\r\n// GET NUMBER OF TASKS IN \"IN PROGRESS\" TASK SECTION AND SHOW THEM\r\n// TOGGLE TASK OR TASKS ACCORDING TO NUMBER\r\n// EVENT LISTENER ADD BUTTON: GET TEXT FROM INPUT FIELD AND ADD IT TO THE LIST OF \"IN PROGRESS\" TASKS, UPDATE NUMBER OF TASKS, ADD A TASK IN PROGRESS ELEMENT, UPDATE TASKS LEFT AND TASKS CREATED\r\n// EVENT LISTENER TASK ELEMENT: REMOVE IT FROM THE LIST OF \"IN PROGRESS\", REMOVE TASK IN PROGRESS ELEMENT, ADD IT TO THE \"FINISHED\" TASK LIST, ADD A TASK FINISHED Element, UPDATE TASKS LEFT, AND TASKS FINISHED\r\n\r\nconst timeframe = (0,_utility_GetTimeFrame__WEBPACK_IMPORTED_MODULE_0__.default)(new Date().getHours())\r\n;(0,_utility_AddStylesheet__WEBPACK_IMPORTED_MODULE_1__.default)(timeframe)\r\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvYXBwLmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vdGltZS1zZW5zaWJsZS10b2RvLWxpc3QvLi9zcmMvYXBwLmpzPzExMTIiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IEdldFRpbWVGcmFtZSBmcm9tICcuL3V0aWxpdHkvR2V0VGltZUZyYW1lJ1xyXG5pbXBvcnQgQWRkU3R5bGVzaGVldCBmcm9tICcuL3V0aWxpdHkvQWRkU3R5bGVzaGVldCdcclxuXHJcbi8vIEdFVCBVU0VSJ1MgVElNRUZSQU1FXHJcbi8vIFNFVCBTVFlMRVNIRUVUXHJcbi8vIFNFVCBXRUxDT01JTkcgUEhSQVNFXHJcbi8vIEdFVCBVU0VSJ1MgTkFNRVxyXG4vLyBTQVZFIFVTRVInUyBOQU1FIElOIEJST1dTRVIgU1RPUkFHRVxyXG4vLyBJRiBUSEVSRSBJUyBBIE5BTUUgSU4gU1RPUkFHRSBTSE9XIElUXHJcbi8vIEdFVCBOVU1CRVIgT0YgVEFTS1MgSU4gXCJJTiBQUk9HUkVTU1wiIFRBU0sgU0VDVElPTiBBTkQgU0hPVyBUSEVNXHJcbi8vIFRPR0dMRSBUQVNLIE9SIFRBU0tTIEFDQ09SRElORyBUTyBOVU1CRVJcclxuLy8gRVZFTlQgTElTVEVORVIgQUREIEJVVFRPTjogR0VUIFRFWFQgRlJPTSBJTlBVVCBGSUVMRCBBTkQgQUREIElUIFRPIFRIRSBMSVNUIE9GIFwiSU4gUFJPR1JFU1NcIiBUQVNLUywgVVBEQVRFIE5VTUJFUiBPRiBUQVNLUywgQUREIEEgVEFTSyBJTiBQUk9HUkVTUyBFTEVNRU5ULCBVUERBVEUgVEFTS1MgTEVGVCBBTkQgVEFTS1MgQ1JFQVRFRFxyXG4vLyBFVkVOVCBMSVNURU5FUiBUQVNLIEVMRU1FTlQ6IFJFTU9WRSBJVCBGUk9NIFRIRSBMSVNUIE9GIFwiSU4gUFJPR1JFU1NcIiwgUkVNT1ZFIFRBU0sgSU4gUFJPR1JFU1MgRUxFTUVOVCwgQUREIElUIFRPIFRIRSBcIkZJTklTSEVEXCIgVEFTSyBMSVNULCBBREQgQSBUQVNLIEZJTklTSEVEIEVsZW1lbnQsIFVQREFURSBUQVNLUyBMRUZULCBBTkQgVEFTS1MgRklOSVNIRURcclxuXHJcbmNvbnN0IHRpbWVmcmFtZSA9IEdldFRpbWVGcmFtZShuZXcgRGF0ZSgpLmdldEhvdXJzKCkpXHJcbkFkZFN0eWxlc2hlZXQodGltZWZyYW1lKVxyXG4iXSwibWFwcGluZ3MiOiI7OztBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOyIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/app.js\n");
+
+/***/ }),
+
+/***/ "./src/utility/AddStylesheet.js":
+/*!**************************************!*\
+  !*** ./src/utility/AddStylesheet.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (timeframe => {\r\n   const link = document.createElement('link');\r\n   link.rel = 'stylesheet';\r\n   link.href = `assets/styles/${timeframe}-style.css`\r\n   document.head.appendChild(link);\r\n\r\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvdXRpbGl0eS9BZGRTdHlsZXNoZWV0LmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vdGltZS1zZW5zaWJsZS10b2RvLWxpc3QvLi9zcmMvdXRpbGl0eS9BZGRTdHlsZXNoZWV0LmpzPzhlNTIiXSwic291cmNlc0NvbnRlbnQiOlsiXHJcbmV4cG9ydCBkZWZhdWx0IHRpbWVmcmFtZSA9PiB7XHJcbiAgIGNvbnN0IGxpbmsgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdsaW5rJyk7XHJcbiAgIGxpbmsucmVsID0gJ3N0eWxlc2hlZXQnO1xyXG4gICBsaW5rLmhyZWYgPSBgYXNzZXRzL3N0eWxlcy8ke3RpbWVmcmFtZX0tc3R5bGUuY3NzYFxyXG4gICBkb2N1bWVudC5oZWFkLmFwcGVuZENoaWxkKGxpbmspO1xyXG5cclxufSJdLCJtYXBwaW5ncyI6Ijs7OztBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/utility/AddStylesheet.js\n");
+
+/***/ }),
+
+/***/ "./src/utility/GetTimeFrame.js":
+/*!*************************************!*\
+  !*** ./src/utility/GetTimeFrame.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (time => {\r\n   \r\n   if(time >= 6 && time < 12)\r\n      return 'morning'\r\n   \r\n   if(time >= 12 && time < 19)\r\n      return 'afternoon'\r\n\r\n   if(time >= 19 && time < 21)\r\n      return 'evening'\r\n   \r\n   return 'night'\r\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvdXRpbGl0eS9HZXRUaW1lRnJhbWUuanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly90aW1lLXNlbnNpYmxlLXRvZG8tbGlzdC8uL3NyYy91dGlsaXR5L0dldFRpbWVGcmFtZS5qcz85OThhIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBkZWZhdWx0IHRpbWUgPT4ge1xyXG4gICBcclxuICAgaWYodGltZSA+PSA2ICYmIHRpbWUgPCAxMilcclxuICAgICAgcmV0dXJuICdtb3JuaW5nJ1xyXG4gICBcclxuICAgaWYodGltZSA+PSAxMiAmJiB0aW1lIDwgMTkpXHJcbiAgICAgIHJldHVybiAnYWZ0ZXJub29uJ1xyXG5cclxuICAgaWYodGltZSA+PSAxOSAmJiB0aW1lIDwgMjEpXHJcbiAgICAgIHJldHVybiAnZXZlbmluZydcclxuICAgXHJcbiAgIHJldHVybiAnbmlnaHQnXHJcbn0iXSwibWFwcGluZ3MiOiI7Ozs7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/utility/GetTimeFrame.js\n");
 
 /***/ })
 
@@ -395,6 +418,18 @@ eval("// GET USER'S TIMEFRAME\r\n// SET STYLESHEET\r\n// SET WELCOMING PHRASE\r\
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/global */
 /******/ 	(() => {
 /******/ 		__webpack_require__.g = (function() {
@@ -410,6 +445,17 @@ eval("// GET USER'S TIMEFRAME\r\n// SET STYLESHEET\r\n// SET WELCOMING PHRASE\r\
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/node module decorator */
